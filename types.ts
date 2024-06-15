@@ -1,20 +1,16 @@
-export interface Boroughs {
-  type: string;
-  features: Feature[];
+export interface Species {
+  "@SpeciesCode": string;
+  "@SpeciesDescription": string;
+  "@AirQualityIndex": string;
+  "@AirQualityBand": string;
+  "@IndexSource": string;
 }
 
-export interface Feature {
-  type: string;
-  properties: Properties;
-  geometry: Geometry;
-}
-
-export interface Properties {
-  name: string;
-  color: string;
-}
-
-export interface Geometry {
-  type: string;
-  coordinates: number[][][];
+export interface Site {
+  SiteCode: string;
+  SiteName: string;
+  SiteType: string;
+  Latitude: string;
+  Longitude: string;
+  Species: Species[];
 }
